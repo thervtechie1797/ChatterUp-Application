@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatterUp</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>ChatterUp</h2>
+        <small>Logged in as <span id="username-display"></span></small>
+        <p id="userCount"></p>
+      </div>
+
+      <div class="chat-body" id="messages">
+        <!--Messages will appear here-->
+      </div>
+
+      <div class="px-3 typing-indicator" id="typing"></div>
+
+      <form action="" id="message-form" class="chat-footer d-flex">
+        <input
+          type="text"
+          id="message-input"
+          class="form-control me-2"
+          placeholder="Type a message....."
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+
+    <!--BootStrap Js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Socket.io-->
+    <script src="/socket.io/socket.io.js"></script>
+    <!--Chat.js-->
+    <script src="./js/chat.js"></script>
+  </body>
+</html>
